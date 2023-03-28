@@ -13,6 +13,9 @@ list_of_files = [".github/workflows/.gitkeep",
                 f"src/{package_name}/pipeline/__init__.py",
                 f"src/{package_name}/entity/__init__.py",
                 f"src/{package_name}/constants/__init__.py",
+                "tests/__init__.py",
+                "tests/unit/__init__.py",
+                "tests/integration/__init__.py",
                 "configs/config.yaml",
                 "dvc.yaml",
                 "params.yaml",
@@ -32,7 +35,7 @@ for filepath in list_of_files:
     if filedir !="":
         os.makedirs(filedir,exist_ok=True)
 
-    if (not os.path.exists(filepath)) or (os.path.getsize()==0):
+    if (not os.path.exists(filepath)) or (os.path.getsize(filepath)==0):
         with open(filepath,"w") as f:
             pass
 
