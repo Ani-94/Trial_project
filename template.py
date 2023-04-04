@@ -3,7 +3,7 @@ from pathlib import Path
 import logging
 
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s]:%(message)s')
-package_name="Deep classifer"
+package_name="deep_classifer"
 
 list_of_files = [".github/workflows/.gitkeep",
                 f"src/{package_name}/__init__.py",
